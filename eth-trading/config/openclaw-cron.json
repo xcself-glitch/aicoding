@@ -1,0 +1,35 @@
+{
+  "name": "ETHUSDT永续合约交易提醒",
+  "description": "5分钟周期监控ETH价格，出现交易信号时通过飞书发送提醒",
+  "jobs": [
+    {
+      "name": "eth-trading-alert-regular",
+      "description": "ETH常规交易监控（5分钟周期，全时段）",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 0-23 * * *",
+        "tz": "Asia/Shanghai"
+      }
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "运行ETH交易提醒: cd skills/eth-trading && python3 scripts/eth_alert_job.py"
+      }
+    },
+    {
+      "name": "eth-trading-alert-high-frequency",
+      "description": "ETH高频监控（5分钟周期，重点时段）",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 9-11,13-15,20-23 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "运行ETH高频监控: cd skills/eth-trading && python3 scripts/eth_alert_job.py"
+      },
+      "disabled": true
+    }
+  ]
+}
