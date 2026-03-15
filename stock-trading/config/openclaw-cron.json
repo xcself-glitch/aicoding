@@ -1,0 +1,76 @@
+{
+  "name": "持仓股智能监控与策略系统",
+  "description": "高频监控价格，触发交易信号或异常波动时实时通知",
+  "jobs": [
+    {
+      "name": "strategy-daily-update",
+      "description": "每日早盘更新买卖策略",
+      "schedule": {
+        "kind": "cron",
+        "expr": "25 9 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "运行股票策略更新脚本: cd skills/stock-monitor-pro && python3 scripts/price_monitor_feishu.py --daily"
+      }
+    },
+    {
+      "name": "price-monitor-regular",
+      "description": "普通股票5分钟监控（交易时间）",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 9-11,13-14 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "监控持仓股价格: cd skills/stock-monitor-pro && python3 scripts/price_monitor_feishu.py --check"
+      }
+    },
+    {
+      "name": "price-monitor-key-am",
+      "description": "重点股票1分钟监控（早盘）",
+      "schedule": {
+        "kind": "cron",
+        "expr": "* 9-11 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "监控重点股票价格: cd skills/stock-monitor-pro && python3 scripts/price_monitor_feishu.py --check-key"
+      }
+    },
+    {
+      "name": "price-monitor-key-pm",
+      "description": "重点股票1分钟监控（午盘）",
+      "schedule": {
+        "kind": "cron",
+        "expr": "* 13-14 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "监控重点股票价格: cd skills/stock-monitor-pro && python3 scripts/price_monitor_feishu.py --check-key"
+      }
+    },
+    {
+      "name": "daily-report",
+      "description": "收盘日报",
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 15 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "生成收盘日报: cd skills/stock-monitor-pro && python3 scripts/price_monitor_feishu.py --report"
+      }
+    }
+  ]
+}
