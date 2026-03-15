@@ -84,7 +84,7 @@ def test_reduce_alert():
     # 找到卫星ETF的配置
     etf = None
     for stock in PORTFOLIO:
-        if stock['code'] == '159206':
+        if stock['code'] == '563230':
             etf = stock
             break
     
