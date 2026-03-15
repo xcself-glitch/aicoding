@@ -1,0 +1,139 @@
+{
+  "date": "2026-03-14",
+  "market_condition": "弱势下跌",
+  "market_bias": "偏空",
+  "strategies": [
+    {
+      "code": "563230",
+      "name": "卫星ETF",
+      "current_price": 1.694,
+      "cost": 1.669,
+      "pnl_pct": 1.4979029358897489,
+      "daily_change": -3.03,
+      "action": "持有",
+      "reason": "已回本，可继续持有",
+      "new_target_buy": 1.58,
+      "new_target_reduce": 1.85
+    },
+    {
+      "code": "603986",
+      "name": "兆易创新",
+      "current_price": 278.33,
+      "cost": 298.69,
+      "pnl_pct": -6.816431751983666,
+      "daily_change": 1.29,
+      "action": "持有",
+      "reason": "等待市场转暖",
+      "new_target_buy": 265.0,
+      "new_target_reduce": 310.0
+    },
+    {
+      "code": "300170",
+      "name": "汉得信息",
+      "current_price": 23.41,
+      "cost": 25.909,
+      "pnl_pct": -9.645297001042104,
+      "daily_change": -10.48,
+      "action": "持有",
+      "reason": "等待市场转暖 | 今日大跌10.5%，注意风险",
+      "new_target_buy": 22.0,
+      "new_target_reduce": 27.0
+    },
+    {
+      "code": "688158",
+      "name": "优刻得",
+      "current_price": 43.01,
+      "cost": 49.151,
+      "pnl_pct": -12.4941506785213,
+      "daily_change": -10.79,
+      "action": "持有",
+      "reason": "等待市场转暖 | 今日大跌10.8%，注意风险",
+      "new_target_buy": 35.0,
+      "new_target_reduce": 47.0
+    },
+    {
+      "code": "002050",
+      "name": "三花智控",
+      "current_price": 47.3,
+      "cost": 53.056,
+      "pnl_pct": -10.84891435464415,
+      "daily_change": -3.03,
+      "action": "持有",
+      "reason": "等待市场转暖",
+      "new_target_buy": 43.0,
+      "new_target_reduce": 52.0
+    },
+    {
+      "code": "600580",
+      "name": "卧龙电驱",
+      "current_price": 40.47,
+      "cost": 45.895,
+      "pnl_pct": -11.820459745070277,
+      "daily_change": -1.87,
+      "action": "持有",
+      "reason": "等待市场转暖",
+      "new_target_buy": 35.0,
+      "new_target_reduce": 44.0
+    },
+    {
+      "code": "300058",
+      "name": "蓝色光标",
+      "current_price": 14.98,
+      "cost": 17.697,
+      "pnl_pct": -15.352884669718026,
+      "daily_change": -4.34,
+      "action": "观望",
+      "reason": "浮亏较大，等待企稳信号",
+      "new_target_buy": null,
+      "new_target_reduce": 17.0
+    },
+    {
+      "code": "300418",
+      "name": "昆仑万维",
+      "current_price": 50.51,
+      "cost": 59.638,
+      "pnl_pct": -15.30567758811496,
+      "daily_change": -4.79,
+      "action": "观望",
+      "reason": "浮亏较大，等待企稳信号",
+      "new_target_buy": null,
+      "new_target_reduce": 55.0
+    },
+    {
+      "code": "600143",
+      "name": "金发科技",
+      "current_price": 17.82,
+      "cost": 21.034,
+      "pnl_pct": -15.280022820195867,
+      "daily_change": -2.57,
+      "action": "观望",
+      "reason": "浮亏较大，等待企稳信号",
+      "new_target_buy": null,
+      "new_target_reduce": 20.0
+    },
+    {
+      "code": "600763",
+      "name": "通策医疗",
+      "current_price": 44.43,
+      "cost": 106.095,
+      "pnl_pct": -58.122437438145056,
+      "daily_change": -1.05,
+      "action": "躺平",
+      "reason": "深度套牢，不建议割肉，等待反弹",
+      "new_target_buy": 40.0,
+      "new_target_reduce": 60.0
+    },
+    {
+      "code": "600031",
+      "name": "三一重工",
+      "current_price": 21.29,
+      "cost": 105.58,
+      "pnl_pct": -79.83519605985981,
+      "daily_change": -1.02,
+      "action": "躺平",
+      "reason": "深度套牢，不建议割肉，等待反弹，极端低位可考虑补仓摊薄",
+      "new_target_buy": 20.23,
+      "new_target_reduce": 25.0
+    }
+  ]
+}
