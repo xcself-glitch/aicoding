@@ -98,7 +98,7 @@ tar -xzf ETH-Trading-Strategy-V19-5min.tar.gz
 mv eth-trading-export eth-trading
 
 # 清理
-rm -f *.tar.gz
+rm -f ETH-Trading-Strategy-V19-5min.tar.gz
 ```
 
 ### 方法二：克隆完整仓库
